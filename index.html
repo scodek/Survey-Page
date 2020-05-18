@@ -1,0 +1,218 @@
+<!DOC html>
+<style>
+	body {
+  background-color: hsl(180, 80%, 20%);
+  font-family: "Rouge Script", cursive;
+}
+#title {
+  text-align: center;
+  margin-top: 40px;
+  /*font-family: 'Rouge Script', cursive; */
+  font-size: 40px;
+  font-weight: bolder;
+  line-height: 48px;
+  color: #e65c00;
+  text-shadow: 1px 1px 2px #803300;
+}
+
+#description {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 23px;
+  /* font-family: 'Rouge Script', cursive; */
+  font-weight: bolder;
+  color: #004c00;
+}
+
+#survey-form {
+  margin: auto;
+  width: 80%;
+}
+
+#main {
+  background-color: hsl(50, 30%, 70%);
+  width: 800px;
+  margin: 0 auto;
+  border-radius: 3px;
+  /*box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);*/
+}
+
+.row-elements {
+  width: 80%;
+  overflow: auto;
+  font-size: 15px;
+  font-weight: bolder;
+  color: rgb(72, 36, 12);
+  padding: 5px;
+  /*border:1px solid red;*/
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+.labels {
+  float: left;
+  width: 47%;
+  text-align: right;
+  color: rgb(72, 36, 12);
+  font-size: 15px;
+  /*font-family: 'Rouge Script', cursive;*/
+  /*border:1px solid blue;*/
+}
+
+.input-fields {
+  float: right;
+  width: 50%;
+  margin-left: 0;
+  /*border:1px solid green;*/
+}
+
+#name,
+#email {
+  width: 200px;
+  height: 30px;
+  border-radius: 3px;
+  padding-left: 5px;
+}
+#age {
+  width: 50px;
+  height: 30px;
+  padding-left: 5px;
+  border-radius: 3px;
+}
+
+#dropdown {
+  width: 200px;
+  height: 28px;
+  border-radius: 3px;
+}
+
+.check-box {
+  height: 20px;
+  width: 20px;
+}
+
+#submit-button {
+  height: 35px;
+  width: 90px;
+  font-size: 15px;
+  border-radius: 5px;
+  position: relative;
+  left: 286px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background: #e65c00;
+}
+
+#submit-button:hover{
+  background: #228B22;
+  cursor:pointer;
+}
+
+
+input,
+select {
+  font-family: "Rouge Script", cursive;
+}
+
+/*#comment{
+  padding-left:10px;
+}*/
+
+	
+</style>
+<head>
+  <title>boot camp survey form</title>
+  <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+</head>
+
+<body>
+  <h1 id="title">Let's make our coding bootcamp awesome !!!!</h1>
+  <div id="main">
+    <p id="description">Something better in mind??? Please fill up the below form.</p>
+    <form id="survey-form" method="GET">
+      <div class="row-elements">
+        <div class="labels">
+          <label id="name-label">Name*: </label>
+        </div>
+        <div class="input-fields">
+          <input type="text" id="name" name="name" placeholder="Write your name" required/>
+        </div>
+      </div>
+
+      <div class="row-elements">
+        <div class="labels">
+          <label id="email-label">Email: </label>
+        </div>
+        <div class="input-fields">
+          <input type="email" id="email" name="email" style="font-family: 'Rouge Script', cursive;" placeholder="Write your email address" />
+        </div>
+      </div>
+
+      <div class="row-elements">
+        <div class="labels">
+          <label id="number-label">Age: </label>
+        </div>
+        <div class="input-fields">
+          <input type="number" id="age" name="age" min="18" max="80" placeholder="Age" />
+        </div>
+      </div>
+
+      <div class="row-elements">
+        <div class="labels">
+          <label id="gender">Gender: </label>
+        </div>
+        <div class="input-fields">
+          <input type="radio" name="gender" value="male" />Male <br/>
+          <input type="radio" name="gender" value="female" />Female <br/>
+          <input type="radio" name="gender" value="not-relevant" />Not Relevant <br/>
+        </div>
+      </div>
+
+      <div class="row-elements">
+        <div class="labels">
+          <label id="FCC-label">From where do you hear about FreeCodeCamp? </label>
+        </div>
+        <div class="input-fields">
+          <select id="dropdown">
+				<option value="nooption">No Option</option>
+				<option value="Internet">Internet</option>
+				<option value="From Friends">Friends</option>
+				<option value="Radio/TV">Radio/TV</option>
+				<option value="Other">Other</option>
+			</select>
+        </div>
+      </div>
+
+      <div class="row-elements">
+        <div class="labels">
+          <label id="improve-label">What do you recommend to improve? </label>
+        </div>
+        <div class="input-fields">
+          <input type="checkbox" class="check-box" name="check-box1" value="blind">Working options for blind people<br/>
+          <input type="checkbox" class="check-box" name="check-box2" value="javascript">More Javascript frameworks<br/>
+          <input type="checkbox" class="check-box" name="check-box3" value="design-pattern">Design-pattern Lesson<br/>
+          <input type="checkbox" class="check-box" name="check-box4" value="backendcode">Backend Programming<br/>
+          <input type="checkbox" class="check-box" name="check-box5" value="peer-programming">Peer programming and Mentoring<br/>
+          <input type="checkbox" class="check-box" name="check-box6" value="debugging">Debugging and Testing lesson<br/>
+          <input type="checkbox" class="check-box" name="check-box7" value="web-security">Courses on Web-Security<br/>
+          <input type="checkbox" class="check-box" name="check-box8" value="other-language">Readability in Other Languages<br/>
+          <input type="checkbox" class="check-box" name="check-box9" value="no-imrove">Nothing to improve<br/>
+        </div>
+      </div>
+
+      <div class="row-elements">
+        <div class="labels">
+          <label id="comments-label">Additional Comments: </label>
+        </div>
+        <div class="input-fields">
+          <textarea id="comment" name="comment" style="height:100px;width:250px;" placeholder="Do you have anything else in mind?"></textarea>
+
+        </div>
+      </div>
+
+      <input id="submit-button" type="submit" value="Submit" />
+    </form>
+  </div>
+</body>
+
+</html>
